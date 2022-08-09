@@ -128,70 +128,7 @@ class Binary_Search_Tree (object):
 
 
 def main():
-    my_tree = Binary_Search_Tree()
-    # test 2
-    # N = 0
-    print('add(50) ', my_tree.add(50))
-    print('add(25) ', my_tree.add(25))
-    print('add(75) ', my_tree.add(75))
-    print('add(70) ', my_tree.add(70))
-    print('add(80) ', my_tree.add(80))
-    print('add(79) ', my_tree.add(79))
-    print('add(78) ', my_tree.add(78))
-    print('add(77) ', my_tree.add(77))
-
-    # print('remove(50) ', my_tree.remove(50))
-    print('remove(75) ', my_tree.remove(75))
-
-    print('search(78) ', my_tree.search(78)[0])
-    # print('search(80) ', my_tree.search(80)[0])
-    # print('search(75) ', my_tree.search(75)[0])
-    print('search(25) ', my_tree.search(25)[0])
-
-
-    # # test 1
-    # print("add")
-    # print('add(5) ', my_tree.add(50))
-    # print('add(6) ', my_tree.add(60))
-    # print('add(6) ', my_tree.add(60))
-    # print('add(7) ', my_tree.add(70))
-    # print('add(7) ', my_tree.add(70))
-    # print('add(2) ', my_tree.add(20))
-    # print('add(1) ', my_tree.add(10))
-    # print('add(3) ', my_tree.add(30))
-    # print('add(25) ', my_tree.add(25))
-    # print('add(58) ', my_tree.add(58))
-    # print('add(59) ', my_tree.add(59))
-    # # print('search')
-    # # print('search(5) ', my_tree.search(5)[0])
-    # # print('search(6) ', my_tree.search(6)[0])
-    # # print('search(7) ', my_tree.search(7)[0])
-    # # print('search(3) ', my_tree.search(3)[0])
-    # # print('search(8) ', my_tree.search(8)[0])
-    # print('remove')
-    # # print('remove(10) ', my_tree.remove(10))
-    # print('==========================')
-    # print('remove(50) ', my_tree.remove(50))
-    # print('==========================')
-    # print('search(60) ', my_tree.search(60)[0])
-    # print('search(70) ', my_tree.search(70)[0])
-    # print('search(10) ', my_tree.search(10)[0])
-    # print('search(30) ', my_tree.search(30)[0])
-    # print('search(25) ', my_tree.search(25)[0])
-    # print('search(59) ', my_tree.search(59)[0])
-    #
-    # # print('remove(2) ', my_tree.remove(2))
-    # # print('remove(1) ', my_tree.remove(1))
-    # # print('search(7) ', my_tree.search(7)[0])
-    # # print('==========================')
-    # # print('remove(5) ', my_tree.remove(5))
-    # # print('search(3) ', my_tree.search(3)[0])
-    # # print('==========================ppppp')
-    # # print('search(7) ', my_tree.search(7)[0])
-    # # print('remove(6) ', my_tree.remove(6))
-    # # print('search(3) ', my_tree.search(3)[0])
-    # # print('==========================')
-    # # print('remove(6) ', my_tree.remove(2))
+    pass
 
 
 

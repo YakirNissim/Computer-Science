@@ -61,32 +61,7 @@ class LinkedList (object):
 
 
 def main():
-    myList = LinkedList()
-    myList.add(5)
-    myList.add(13)
-    myList.add(5)
-    myList.add(33)
-    myList.add(22)
-    print(myList.get_list_of_linkde_list())
-    print(myList.get_size())
-    myList.remove(5)
-    print(myList.get_list_of_linkde_list())
-    print(myList.get_size())
-    myList.remove(22)
-    print(myList.get_list_of_linkde_list())
-    print(myList.get_size())
-    myList.remove(5)
-    print(myList.get_list_of_linkde_list())
-    print(myList.get_size())
-    myList.remove(5)
-    print(myList.get_list_of_linkde_list())
-    print(myList.get_size())
-    x, y = myList.find(5)
-    print(x)
-    if x:
-        print(y.get_data())
-    else:
-        print(y)
+    pass
 
 
 if __name__ == "__main__":
