@@ -129,7 +129,7 @@ class Binary_Search_Tree (object):
 
 def main():
     pass
-
+    return 0
 
 
 if __name__ == '__main__':

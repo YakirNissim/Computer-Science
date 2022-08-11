@@ -12,18 +12,16 @@ class MaxHeap(object):
 
     def add(self, data):
         self.heap += [data]
-        dataind = len(self.heap) - 1
-        while(self.heap[dataind] > self.heap[int(dataind/2)] and dataind > 1):
-            # print(f'i = {dataind}')
-            # print(f'{self.heap[dataind]} > {self.heap[int(dataind/2)]}')
-            self.heap[dataind], self.heap[int(dataind / 2)] = self.heap[int(dataind/2)], self.heap[dataind]
-            dataind = int(dataind/2)
+        data_index = len(self.heap) - 1
+        while self.heap[data_index] > self.heap[int(data_index / 2)] and data_index > 1:
+            self.heap[data_index], self.heap[int(data_index / 2)] = self.heap[int(data_index / 2)], self.heap[data_index]
+            data_index = int(data_index / 2)
 
-    def remove(self, dataind):
-        if (len(self.heap) > 1) and (len(self.heap) > dataind > 0):
-            self.heap[dataind], self.heap[len(self.heap) - 1] = self.heap[len(self.heap) - 1], self.heap[dataind]
+    def remove(self, data_index):
+        if (len(self.heap) > 1) and (len(self.heap) > data_index > 0):
+            self.heap[data_index], self.heap[len(self.heap) - 1] = self.heap[len(self.heap) - 1], self.heap[data_index]
             self.heap = self.heap[:-1]
-            self.heapify(dataind, len(self.heap) - 1)
+            self.heapify(data_index, len(self.heap) - 1)
             return True
         return False
 
@@ -32,14 +30,14 @@ class MaxHeap(object):
             self.heapify(i, len(self.heap) - 1)
 
     def heapify(self, i, j):
-        maxind = i
-        if 2*i <= j and self.heap[2*i] > self.heap[maxind]:
-            maxind = 2*i
-        if (2*i + 1) <= j and self.heap[2*i + 1] > self.heap[maxind]:
-            maxind = 2*i + 1
-        if maxind != i:
-            self.heap[i], self.heap[maxind] =  self.heap[maxind], self.heap[i]
-            self.heapify(maxind, j)
+        max_index = i
+        if 2*i <= j and self.heap[2*i] > self.heap[max_index]:
+            max_index = 2 * i
+        if (2*i + 1) <= j and self.heap[2*i + 1] > self.heap[max_index]:
+            max_index = 2 * i + 1
+        if max_index != i:
+            self.heap[i], self.heap[max_index] = self.heap[max_index], self.heap[i]
+            self.heapify(max_index, j)
 
     def get_heap_sort(self):
         old_heap = self.heap
@@ -65,18 +63,16 @@ class MinHeap(object):
 
     def add(self, data):
         self.heap += [data]
-        dataind = len(self.heap) - 1
-        while(self.heap[dataind] < self.heap[int(dataind/2)] and dataind > 1):
-            # print(f'i = {dataind}')
-            # print(f'{self.heap[dataind]} > {self.heap[int(dataind/2)]}')
-            self.heap[dataind], self.heap[int(dataind / 2)] = self.heap[int(dataind/2)], self.heap[dataind]
-            dataind = int(dataind/2)
+        data_index = len(self.heap) - 1
+        while self.heap[data_index] < self.heap[int(data_index / 2)] and data_index > 1:
+            self.heap[data_index], self.heap[int(data_index / 2)] = self.heap[int(data_index / 2)], self.heap[data_index]
+            data_index = int(data_index / 2)
 
-    def remove(self, dataind):
-        if (len(self.heap) > 1) and (len(self.heap) > dataind > 0):
-            self.heap[dataind], self.heap[len(self.heap) - 1] = self.heap[len(self.heap) - 1], self.heap[dataind]
+    def remove(self, data_index):
+        if (len(self.heap) > 1) and (len(self.heap) > data_index > 0):
+            self.heap[data_index], self.heap[len(self.heap) - 1] = self.heap[len(self.heap) - 1], self.heap[data_index]
             self.heap = self.heap[:-1]
-            self.heapify(dataind, len(self.heap) - 1)
+            self.heapify(data_index, len(self.heap) - 1)
             return True
         return False
 
@@ -85,14 +81,14 @@ class MinHeap(object):
             self.heapify(i, len(self.heap) - 1)
 
     def heapify(self, i, j):
-        minind = i
-        if 2*i <= j and self.heap[2*i] < self.heap[minind]:
-            minind = 2 * i
-        if (2*i + 1) <= j and self.heap[2*i + 1] < self.heap[minind]:
-            minind = 2 * i + 1
-        if minind != i:
-            self.heap[i], self.heap[minind] = self.heap[minind], self.heap[i]
-            self.heapify(minind, j)
+        min_index = i
+        if 2*i <= j and self.heap[2*i] < self.heap[min_index]:
+            min_index = 2 * i
+        if (2*i + 1) <= j and self.heap[2*i + 1] < self.heap[min_index]:
+            min_index = 2 * i + 1
+        if min_index != i:
+            self.heap[i], self.heap[min_index] = self.heap[min_index], self.heap[i]
+            self.heapify(min_index, j)
 
     def get_heap_sort(self):
         old_heap = self.heap
@@ -106,6 +102,7 @@ class MinHeap(object):
 
 def main():
     pass
+    return 0
 
 
 if __name__ == '__main__':

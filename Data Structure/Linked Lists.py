@@ -17,7 +17,7 @@ class Node (object):
 
 
 class LinkedList (object):
-    def __init__(self, root = None):
+    def __init__(self, root=None):
         self.root = root
         self.size = 0
 
@@ -51,7 +51,7 @@ class LinkedList (object):
             check_node = check_node.get_next_node()
         return False, None
 
-    def get_list_of_linkde_list(self):
+    def get_list_of_linked_list(self):
         this_node = self.root
         return_list = []
         while this_node:
@@ -62,6 +62,7 @@ class LinkedList (object):
 
 def main():
     pass
+    return 0
 
 
 if __name__ == "__main__":
