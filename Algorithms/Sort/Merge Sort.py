@@ -1,23 +1,18 @@
 class MergeSort(object):
-    def __init__(self, array=[]):
-        self.array = array
+    array = None
 
-    def set_array(self, new_array=[]):
-        self.array = new_array
+    @classmethod
+    def sort(cls, array):
+        return cls.array_sort_recursive_function(array)
 
-    def get_array(self):
-        return self.array
-
-    def array_sort(self):
-        self.array = self.array_sort_recursive_function(self.array)
-
-    def array_sort_recursive_function(self, array):
-        a, b = self.array_cutting(array)
+    @classmethod
+    def array_sort_recursive_function(cls, array):
+        a, b = cls.array_cutting(array)
         if len(a) > 1:
-            a = self.array_sort_recursive_function(a)
+            a = cls.array_sort_recursive_function(a)
         if len(b) > 1:
-            b = self.array_sort_recursive_function(b)
-        return self.merging_sorted_arrays(a, b)
+            b = cls.array_sort_recursive_function(b)
+        return cls.merging_sorted_arrays(a, b)
 
     @staticmethod
     def array_cutting(array):
@@ -47,12 +42,11 @@ class MergeSort(object):
 
 def main():  # test
     import random
-    my_merge_sort = MergeSort()
     n = int(input("n = "))
-    my_merge_sort.set_array([random.randint(0, 100) for i in range(n)])
-    print('The array before sorting:\n', my_merge_sort.get_array())
-    my_merge_sort.array_sort()
-    print('The array after sorting:\n', my_merge_sort.get_array())
+    my_array = [random.randint(0, 100) for i in range(n)]
+    print('The array before sorting:\n', my_array)
+    my_array = MergeSort.sort(my_array)
+    print('The array after sorting:\n', my_array)
     return 0
 
 

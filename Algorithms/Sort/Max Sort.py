@@ -1,35 +1,30 @@
 class MaxSort(object):
-    def __init__(self, array=[]):
-        self.array = array
+    array = None
 
-    def set_array(self, new_array=[]):
-        self.array = new_array
-
-    def get_array(self):
-        return self.array
-
-    def array_sort(self):
+    @classmethod
+    def sort(cls, array):
+        cls.array = array
         max_index = 0
-        for length in range(len(self.array), 1, -1):
-            max_index = self.find_max(length)
-            self.array[length - 1], self.array[max_index] = self.array[max_index], self.array[length - 1]
+        for length in range(len(cls.array), 1, -1):
+            max_index = cls.find_max(length)
+            cls.array[length - 1], cls.array[max_index] = cls.array[max_index], cls.array[length - 1]
 
-    def find_max(self, length):
+    @classmethod
+    def find_max(cls, length):
         max_index = 0
         for i in range(1, length):
-            if self.array[i] > self.array[max_index]:
+            if cls.array[i] > cls.array[max_index]:
                 max_index = i
         return max_index
 
 
 def main():  # test
     import random
-    my_max_sort = MaxSort()
     n = int(input("n = "))
-    my_max_sort.set_array([random.randint(0, 100) for i in range(n)])
-    print('The array before sorting:\n', my_max_sort.get_array())
-    my_max_sort.array_sort()
-    print('The array after sorting:\n', my_max_sort.get_array())
+    my_array = [random.randint(0, 100) for i in range(n)]
+    print('The array before sorting:\n', my_array)
+    MaxSort.sort(my_array)
+    print('The array after sorting:\n', my_array)
     return 0
 
 
