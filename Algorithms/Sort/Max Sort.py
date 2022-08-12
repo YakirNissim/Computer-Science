@@ -2,15 +2,15 @@ class MaxSort(object):
     def __init__(self, array=[]):
         self.array = array
 
-    def Set_array(self, new_array=[]):
+    def set_array(self, new_array=[]):
         self.array = new_array
 
-    def Get_array(self):
+    def get_array(self):
         return self.array
 
-    def Array_sort(self):
+    def array_sort(self):
         max_index = 0
-        for length in range(len(self.array), 1):
+        for length in range(len(self.array), 1, -1):
             max_index = self.find_max(length)
             self.array[length - 1], self.array[max_index] = self.array[max_index], self.array[length - 1]
 
