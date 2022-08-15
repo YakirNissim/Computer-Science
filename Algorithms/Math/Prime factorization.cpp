@@ -33,7 +33,9 @@ int input_and_check(string print_text) {
 }
 
 void prime_numbers(int prime_numbers_arr[], int num) {
-	int sqrt_num = (sqrt(num) + 0.5);
+	int sqrt_num = (sqrt(num/2));
+	if (sqrt(num / 2) > sqrt_num)
+		++sqrt_num;
 	for (int i = 0; i < num+1; ++i) prime_numbers_arr[i] = 1;
 	prime_numbers_arr[0] = prime_numbers_arr[1] = 0;
 	

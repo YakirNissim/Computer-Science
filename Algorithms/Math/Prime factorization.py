@@ -7,7 +7,7 @@ class PrimeFactorization(object):
 
     @classmethod
     def factorization(cls, data):
-        if data > 2:
+        if data >= 2:
             cls.num = data
             cls.prime_factorization_arr = [True if i > 1 else False for i in range(data + 1)]
             cls.prime_numbers()
@@ -31,7 +31,7 @@ class PrimeFactorization(object):
 
     @classmethod
     def prime_numbers(cls):
-        sqrt_num = int(math.sqrt(cls.num))
+        sqrt_num = int(math.sqrt(cls.num/2))
         if math.sqrt(cls.num) > sqrt_num:
             sqrt_num += 1
         for prime in range(2, sqrt_num+1):
@@ -43,6 +43,11 @@ class PrimeFactorization(object):
 def main():  # test
     num = int(input("please enter number\nnum = "))
     print(PrimeFactorization.factorization(num))
+    # import random
+    # my_array = [random.randint(2, 1000) for i in range(20)]
+    # print(my_array)
+    # for num in my_array:
+    #     print(PrimeFactorization.factorization(num))
     return 0
 
 
