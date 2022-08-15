@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int GCD(int x, int y);
+int GCD(int x, int y);  // if GCD(x, y) = 1 then x and y  are relatively prime integers!
 int input_and_check(string print_text);
 
 int main() {
@@ -11,6 +11,7 @@ int main() {
 	x = input_and_check("num1 = ");
 	y = input_and_check("num2 = ");
 	cout << "GCD(" << x << ", " << y << ") = " << GCD(x, y);
+	//cout << "GCD(x, y) = " << GCD(x, y);
 	return 0;
 }
 
@@ -18,7 +19,7 @@ int input_and_check(string print_text) {
 	int x = -1;
 	cout << print_text;
 	cin >> x;
-	while (!cin.good() || x < 2) {
+	while (!cin.good() || x < 0) {
 		cout << "The input you entered is incorrect!" << endl << "Please try again" << endl;
 		cin.clear();
 		cin.ignore(INT_MAX, '\n');
