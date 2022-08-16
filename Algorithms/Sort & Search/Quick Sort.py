@@ -1,4 +1,4 @@
-class BubbleSort(object):
+class QuickSort(object):
     array = None
 
     @classmethod
@@ -33,7 +33,7 @@ def main():  # test
     n = int(input("n = "))
     my_array = [random.randint(0, 100) for i in range(n)]
     print('The array before sorting:\n', my_array)
-    BubbleSort.sort(my_array)
+    QuickSort.sort(my_array)
     print('The array after sorting:\n', my_array)
     return 0
 
