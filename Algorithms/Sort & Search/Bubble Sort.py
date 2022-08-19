@@ -7,7 +7,7 @@ class BubbleSort(object):
         not_sorted = True
         sort_index = len(cls.array)
         while len(cls.array) > 1 and not_sorted:
-            not_sorted = cls.bubble(sort_index, )
+            not_sorted = cls.bubble(sort_index)
             sort_index -= 1
 
     @classmethod
