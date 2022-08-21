@@ -4,7 +4,6 @@ class CircularQueue(object):
         self.full_queue = False
         self.length_queue = length_queue
         self.queue = [None for i in range(length_queue)]
-        pass
 
     def enqueue(self, data):
         if self.full_queue:
