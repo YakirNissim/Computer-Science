@@ -100,10 +100,9 @@ class Binary_Search_Tree (object):
             return
         fathers_node = [self.root]
         fathers_val = [self.root.get_data()]
-        tree_depth = 0
-        mor_child = True
-        while mor_child:
-            mor_child = False
+        more_child = True
+        while more_child:
+            more_child = False
             index = 0
             children_val = []
             children_node = []
@@ -121,10 +120,9 @@ class Binary_Search_Tree (object):
                         children_val += [None]
                     else:
                         children_val += [children_node[-1].get_data()]
-                    mor_child = True
+                    more_child = True
                 index += 1
-            tree_depth += 1
-            if mor_child:
+            if more_child:
                 print(fathers_val)
             fathers_val = children_val
             fathers_node = children_node
